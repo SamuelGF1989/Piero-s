@@ -1,0 +1,66 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+}
+
+.logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+.logo a:hover {
+  color: aqua; /* Cambiar a color aqua */
+  text-shadow: 0 0 10px aqua, 0 0 20px aqua, 0 0 30px aqua; /* También ajustado al color aqua */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: aqua; /* Cambiar a color aqua */
+  text-shadow: 0 0 10px aqua, 0 0 20px aqua, 0 0 30px aqua; /* También ajustado al color aqua */
+}
+
+.search-bar {
+  display: flex;
+}
+
+.search-bar input {
+  padding: 5px;
+  border: none;
+  border-radius: 3px 0 0 3px;
+}
+
+.search-bar button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #555;
+  color: white;
+  border-radius: 0 3px 3px 0;
+  cursor: pointer;
+  transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: #444;
+  color: aqua; /* Cambiar a color aqua */
+  text-shadow: 0 0 10px aqua, 0 0 20px aqua, 0 0 30px aqua; /* También ajustado al color aqua */
+}

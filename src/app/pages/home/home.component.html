@@ -1,0 +1,46 @@
+<app-header></app-header>
+
+<div class="carousel-container">
+  <p-carousel [value]="products.slice(0, 5)" [numVisible]="1" [numScroll]="1" [autoplayInterval]="3000"> <!-- Configura el intervalo de auto-reproducción en milisegundos -->
+    <ng-template pTemplate="item" let-product>
+      <div class="product-item">
+        <div class="product-item-content">
+          <div class="p-mb-3">
+            <img [src]="product.images && product.images[0]" alt="{{product.title}}" class="product-image" />
+          </div>
+          <div>
+            <h4 class="p-mb-1">{{product.title}}</h4>
+            <p class="product-price">{{product.price | currency}}</p>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+</div>
+
+<div class="product-list">
+  <div class="product-items" *ngFor="let product of paginatedProducts">
+    <img [src]="product.images && product.images[0]" alt="{{ product.title }}" class="product-image" style="width: 200px;" />
+    <div class="product-details">
+      <div class="product-category"><strong>{{ product.category }}</strong></div>
+      <div class="product-title">{{ product.title }}</div>
+      <div class="product-rating">
+        <span class="rating">{{ product.rating }}</span>
+        <i class="pi pi-star-fill"></i>
+      </div>
+      <div class="product-price">{{ '$' + product.price }}</div>
+      <div class="product-actions">
+        <button pButton icon="pi pi-heart" [style]="{ 'margin-right': '10px' }"></button>
+        <button pButton icon="pi pi-shopping-cart" class="cart-button" label="Buy Now"></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="pagination">
+  <button [disabled]="currentPage === 1" (click)="prevPage()" class="pagination-button">Previous</button>
+  <span>{{ currentPage }} / {{ totalPages }}</span>
+  <button [disabled]="currentPage === totalPages" (click)="nextPage()" class="pagination-button">Next</button>
+</div>
+
+<app-footer></app-footer>
