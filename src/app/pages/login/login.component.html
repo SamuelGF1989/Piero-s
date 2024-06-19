@@ -1,0 +1,24 @@
+<div class="login">
+  <p-card header="Login" subheader="Ingresa tus credenciales para acceder" [style]="{ width: '500px' }" >
+    <ng-template pTemplate="header">
+      <img alt="Card" src="assets/user.jpeg" />
+    </ng-template>
+    <div class="p-fluid">
+      <div class="p-field">
+        <label for="username">Username</label>
+        <input id="username" type="text" [(ngModel)]="username" pInputText />
+      </div>
+      <div class="p-field">
+        <label for="password">Password</label>
+        <p-password id="password" [(ngModel)]="password" [feedback]="false"></p-password>
+      </div>
+    </div>
+    <ng-template pTemplate="footer">
+      <div class="flex gap-3 mt-1">
+        <p-button label="Cancel" severity="secondary" class="w-full" styleClass="w-full" />
+        <p-button label="Login" class="w-full" styleClass="w-full" (click)="onLoginClick()" />
+      </div>
+      <p>¿No tienes una cuenta? <span class="registro" [routerLink]="'/register'">Registrate</span></p>
+    </ng-template>
+  </p-card>
+</div>

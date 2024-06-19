@@ -15,6 +15,10 @@ import { PaginatorModule } from 'primeng/paginator';
 import { CardModule } from 'primeng/card';
 import { TagModule } from 'primeng/tag';
 import { FooterComponent } from './components/footer/footer.component';
+import { LoginComponent } from './pages/login/login.component';
+import { RouterModule } from '@angular/router';
+import { PasswordModule } from 'primeng/password';
+import { RegisterComponent } from './pages/register/register.component';
 
 
 @NgModule({
@@ -24,6 +28,8 @@ import { FooterComponent } from './components/footer/footer.component';
     HomeComponent,
     Error404Component,
     FooterComponent,
+    LoginComponent,
+    RegisterComponent,
 
   ],
   imports: [
@@ -36,7 +42,9 @@ import { FooterComponent } from './components/footer/footer.component';
     DataViewModule,
     PaginatorModule,
     CardModule,
-    TagModule
+    TagModule,
+    RouterModule,
+    PasswordModule
 
   ],
   providers: [],
