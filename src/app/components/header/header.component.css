@@ -1,22 +1,34 @@
 .navbar {
+  font-family: Arial;
+  font-weight: bold;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  background-color: #333;
-  color: white;
+  background-color: #f7f7f7;
+  color: black;
   padding: 10px 20px;
+  border: 5px solid black;
 }
 
+
+.logo{
+  margin-bottom: 5px;
+}
+
+.logo img {
+  max-width: 250px; /* adjust the value to your liking */
+  height: auto; /* keep the aspect ratio */
+}
 .logo a {
-  color: white;
+  color: black;
   text-decoration: none;
   font-size: 24px;
-  transition: text-shadow 0.3s ease, color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .logo a:hover {
-  color: aqua; /* Cambiar a color aqua */
-  text-shadow: 0 0 10px aqua, 0 0 20px aqua, 0 0 30px aqua; /* También ajustado al color aqua */
+  color: #000033; /* Change this line */
+  text-decoration: underline;
 }
 
 .nav-links {
@@ -29,38 +41,31 @@
 }
 
 .nav-links a {
-  color: white;
+  color: black;
   text-decoration: none;
-  transition: text-shadow 0.3s ease, color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: aqua; /* Cambiar a color aqua */
-  text-shadow: 0 0 10px aqua, 0 0 20px aqua, 0 0 30px aqua; /* También ajustado al color aqua */
+  color: #000033; /* Change this line */
+  text-decoration: underline;
 }
 
-.search-bar {
+
+.nav-links ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
+  justify-content: space-between;
 }
 
-.search-bar input {
-  padding: 5px;
-  border: none;
-  border-radius: 3px 0 0 3px;
+.nav-actions {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Add this line */
 }
 
-.search-bar button {
-  padding: 5px 10px;
-  border: none;
-  background-color: #555;
-  color: white;
-  border-radius: 0 3px 3px 0;
-  cursor: pointer;
-  transition: text-shadow 0.3s ease, color 0.3s ease;
-}
-
-.search-bar button:hover {
-  background-color: #444;
-  color: aqua; /* Cambiar a color aqua */
-  text-shadow: 0 0 10px aqua, 0 0 20px aqua, 0 0 30px aqua; /* También ajustado al color aqua */
+.nav-actions button {
+  margin-left: 10px; /* Add this line */
 }

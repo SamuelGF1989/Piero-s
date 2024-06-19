@@ -1,16 +1,20 @@
 <nav class="navbar">
   <div class="logo">
-    <a href="#">Mi Tienda</a>
+    <a href="#"><img src="assets/logo.png"></a>
   </div>
-  <ul class="nav-links">
-    <li><a href="#">Inicio</a></li>
-    <li><a href="#">Productos</a></li>
-    <li><a href="#">Ofertas</a></li>
-    <li><a href="#">Contacto</a></li>
-    <li><a href="#">Carrito</a></li>
-  </ul>
-  <div class="search-bar">
-    <input type="text" placeholder="Buscar...">
-    <button>Buscar</button>
+  <div class="nav-actions">
+    <p-button label="Carrito" icon="pi pi-cart-plus" [raised]="true" severity="secondary" />
+    <p-button label="Iniciar sesion" icon="pi pi-user" [text]="true" [raised]="true"  />
+  </div>
+  <div class="nav-links">
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Tecnlogia</a></li>
+      <li><a href="#">Belleza</a></li>
+      <li><a href="#">Alimentos</a></li>
+      <li><a href="#">Hogar</a></li>
+      <li><a href="#">Moda</a></li>
+      <li><a href="#">Vehiculos</a></li>
+    </ul>
   </div>
 </nav>
