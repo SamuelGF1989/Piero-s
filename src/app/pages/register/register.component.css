@@ -1,3 +1,9 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
 .register {
   display: flex;
   justify-content: center;
@@ -6,19 +12,15 @@
   margin: 0;
 }
 
-.userinput{
-
+.userinput {
   margin-left: 10px;
-
 }
 
-.mailinput{
-
+.mailinput {
   margin-left: 43px;
-
 }
 
-.register.p-card {
+.register .p-card {
   margin: auto;
 }
 
@@ -35,4 +37,13 @@
 
 .login:hover {
   color: darkblue; /* Cambiar el color al pasar el mouse */
+}
+
+.register img {
+  display: block;
+  margin: 0 auto; /* Centrar la imagen horizontalmente */
+  width: 100%; /* Ajustar según sea necesario */
+  height: auto; /* Mantener la relación de aspecto */
+  max-width: 400px; /* Ajustar según sea necesario */
+  max-height: 400px; /* Ajustar según sea necesario */
 }

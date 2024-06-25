@@ -1,5 +1,5 @@
 <div class="login">
-  <p-card header="Login" subheader="Ingresa tus credenciales para acceder" [style]="{ width: '500px' }" >
+  <p-card header="Login" subheader="Ingresa tus credenciales para acceder" [style]="{ width: '100%', maxWidth: '500px' }" >
     <ng-template pTemplate="header">
       <img alt="Card" src="assets/user.jpeg" />
     </ng-template>
@@ -12,7 +12,7 @@
         <label for="password">Password</label>
         <p-password id="password" [(ngModel)]="password" [feedback]="false"></p-password>
       </div>
-      <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p> <!-- Mostrar mensaje de error -->
+      <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p>
     </div>
     <ng-template pTemplate="footer">
       <div class="flex gap-3 mt-1">

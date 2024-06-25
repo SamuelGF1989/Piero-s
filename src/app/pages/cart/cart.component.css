@@ -6,6 +6,11 @@
   color: #333;
 }
 
+img{
+  width: 100px;
+  height: 100px;
+}
+
 .cart-list {
   list-style: none;
   padding: 0;
@@ -46,6 +51,7 @@
   display: flex;
   justify-content: space-between;
   font-size: 18px;
+  margin-left: 300px;
 }
 
 .total-label {
@@ -55,4 +61,22 @@
 .total-value {
   font-weight: bold;
   color: #2c3e50;
+}
+
+.cart-total {
+  padding: 12px 16px;
+  border-top: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between; /* Alinea los elementos al inicio y al final del contenedor */
+  align-items: center; /* Centra verticalmente los elementos */
+  font-size: 18px;
+}
+
+.clear-button{
+  margin-left: 2px;
+}
+
+.remove{
+  width: 50px;
+  height: 50px;
 }

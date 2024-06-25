@@ -8,6 +8,7 @@
   color: black;
   padding: 10px 20px;
   border: 5px solid black;
+  width: 100%;
 }
 
 
@@ -68,4 +69,37 @@
 
 .nav-actions button {
   margin-left: 10px; /* Add this line */
+}
+
+
+/* Media Query para pantallas menores de 787px */
+@media (max-width: 787px) {
+  .navbar {
+    flex-direction: row;
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+  }
+  .logo {
+    margin-bottom: 0; /* Eliminar margen inferior en pantallas pequeñas */
+  }
+  .nav-links {
+    justify-content: center; /* Centrar los enlaces de navegación */
+    flex: 1; /* Permitir que ocupe el espacio disponible */
+    margin: 10px 0; /* Añadir margen superior e inferior */
+  }
+  .nav-actions {
+    justify-content: center; /* Centrar las acciones de navegación */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    margin-top: 10px; /* Añadir margen superior */
+  }
+  .nav-actions button {
+    margin-left: 10px; /* Mantener margen izquierdo de los botones */
+    margin-top: 0; /* Eliminar margen superior */
+  }
+}
+
+@media (max-width: 785px) {
+  .navbar {
+    border: none; /* Quitar el borde */
+    padding: 5px; /* Ajustar el padding */
+  }
 }

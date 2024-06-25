@@ -18,6 +18,15 @@
   </p-carousel>
 </div>
 
+
+<p-messages
+class="fixed-top"
+[(value)]="messages"
+[showTransitionOptions]="'500ms'"
+[hideTransitionOptions]="'500ms'"
+[enableService]="true">
+</p-messages>
+
 <div class="product-list">
   <div class="product-items" *ngFor="let product of paginatedProducts">
     <img [src]="product.images && product.images[0]" alt="{{ product.title }}" class="product-image" style="width: 200px;" />

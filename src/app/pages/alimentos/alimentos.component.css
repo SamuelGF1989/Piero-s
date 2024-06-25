@@ -1,8 +1,9 @@
-.carousel-container {
-  margin: 0 auto; /* Centra el carrusel horizontalmente */
-  max-width: 1200px; /* Establece el ancho máximo del carrusel */
-  padding: 0 20px; /* Agrega un espacio de relleno a los lados del carrusel */
-  margin-top: 20px;
+.fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Asegura que el componente esté por encima de otros elementos */
 }
 
 .product-item {

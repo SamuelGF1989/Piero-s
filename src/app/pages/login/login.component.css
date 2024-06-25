@@ -1,9 +1,8 @@
-
 body, html {
   height: 100%;
   margin: 0;
+  font-family: Arial, sans-serif;
 }
-
 
 .login {
   display: flex;
@@ -11,19 +10,23 @@ body, html {
   align-items: center;
   width: 100%;
   height: 100vh;
-
-}
-.img{
-  height: 200px;
+  padding: 20px; /* Añadido padding para mejor visualización en pantallas pequeñas */
+  box-sizing: border-box; /* Incluye padding y border en el tamaño total de los elementos */
 }
 
-.p-fluid .p-field {
-  margin-bottom: 1rem;
+.p-card {
+  width: 100%;
+  max-width: 500px; /* Limitar el ancho máximo del card */
+  box-sizing: border-box;
 }
 
 .p-card .p-card-header img {
   width: 100%;
   height: auto;
+}
+
+.p-fluid .p-field {
+  margin-bottom: 1rem;
 }
 
 .p-fluid {
@@ -34,17 +37,52 @@ body, html {
 .p-field {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem; /* Ajusta el espaciado entre los campos */
+  margin-bottom: 1rem;
+}
+
+.flex {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.mt-1 {
+  margin-top: 1rem;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .registro {
   cursor: pointer;
-  color: blue; /* Color azul para indicar un enlace */
-  text-decoration: underline; /* Subrayado para indicar un enlace */
+  color: blue;
+  text-decoration: underline;
 }
 
 .registro:hover {
-  color: darkblue; /* Cambiar el color al pasar el mouse */
+  color: darkblue;
 }
 
+img{
+  width: 400px;
+  height: 400px;
+}
 
+/* Media Queries */
+@media (max-width: 600px) {
+  .p-card {
+    width: 100%;
+    padding: 1rem; /* Añadir padding para mejor visualización en pantallas pequeñas */
+  }
+
+  .flex {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .p-card {
+    padding: 0.5rem; /* Reducir el padding en pantallas muy pequeñas */
+  }
+}

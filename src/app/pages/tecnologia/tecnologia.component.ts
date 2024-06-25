@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { ProductsService } from '../../productservice.service';
 import { Product } from '../../interfaces/product.interface';
+import { Message } from 'primeng/api/message';
+import { CarritoService } from '../../services/carrito.service';
 
 @Component({
   selector: 'app-tecnologia',
@@ -14,7 +16,10 @@ export class TecnologiaComponent {
   currentPage = 1;
   itemsPerPage = 10; // Cambia este valor según la cantidad de productos que quieras mostrar por página
 
-  constructor(private productsService: ProductsService) { }
+  constructor(private productsService: ProductsService, private carritoService: CarritoService) { }
+
+  carrito: any[] = [];
+  messages: Message[] = [];
 
   ngOnInit(): void {
     this.productsService.getTech()
@@ -23,6 +28,24 @@ export class TecnologiaComponent {
         this.paginateProducts();
       });
   }
+
+
+  agregarAlCarrito(product: any) {
+    this.carritoService.addProductToCart(product);
+    this.showMessage();
+  }
+
+  showMessage() {
+    this.messages = [
+      { severity: 'success', summary: 'Éxito', detail: 'Producto agregado al carrito' }
+    ];
+
+    // Opción para ocultar automáticamente el mensaje después de un tiempo
+    setTimeout(() => {
+      this.messages = [];
+    }, 3000); // Ocultar mensaje después de 3 segundos
+  }
+
 
   paginateProducts(): void {
     const startIndex = (this.currentPage - 1) * this.itemsPerPage;

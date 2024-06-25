@@ -22,6 +22,11 @@ export class CartComponent {
     this.cart = this.carritoService.cart$;
   }
 
+  removeFromCart(index: number) {
+    console.log(index)
+    this.carritoService.removeProductFromCart(index);
+  }
+
   getTotal(): number {
     let total = 0;
     this.cart.subscribe(products => {
@@ -50,6 +55,12 @@ export class CartComponent {
     } else {
       alert('No se puede realizar la compra. Asegúrate de haber iniciado sesión y de tener productos en el carrito.');
     }
+  }
+
+  clearClart():void{
+
+    this.carritoService.clearCart();
+
   }
 
   generatePDF(): void {

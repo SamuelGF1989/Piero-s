@@ -26,7 +26,8 @@ import { HogarComponent } from './pages/hogar/hogar.component';
 import { ModaComponent } from './pages/moda/moda.component';
 import { VehiculosComponent } from './pages/vehiculos/vehiculos.component';
 import { CartComponent } from './pages/cart/cart.component';
-import { OrderListModule } from 'primeng/orderlist';
+import { MessagesModule } from 'primeng/messages';
+
 
 
 
@@ -61,6 +62,7 @@ import { OrderListModule } from 'primeng/orderlist';
     TagModule,
     RouterModule,
     PasswordModule,
+    MessagesModule,
 
 
   ],

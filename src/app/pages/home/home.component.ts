@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductsService } from '../../productservice.service';
 import { Product } from '../../interfaces/product.interface';
 import { CarritoService } from '../../services/carrito.service';
+import { Message } from 'primeng/api/message';
 
 @Component({
   selector: 'app-home',
@@ -19,6 +20,7 @@ export class HomeComponent implements OnInit {
 
 
   carrito: any[] = [];
+  messages: Message[] = [];
 
   ngOnInit(): void {
     this.productsService.getProducts()
@@ -30,7 +32,20 @@ export class HomeComponent implements OnInit {
 
   agregarAlCarrito(product: any) {
     this.carritoService.addProductToCart(product);
+    this.showMessage();
   }
+
+  showMessage() {
+    this.messages = [
+      { severity: 'success', summary: 'Éxito', detail: 'Producto agregado al carrito' }
+    ];
+
+    // Opción para ocultar automáticamente el mensaje después de un tiempo
+    setTimeout(() => {
+      this.messages = [];
+    }, 3000); // Ocultar mensaje después de 3 segundos
+  }
+
 
   paginateProducts(): void {
     const startIndex = (this.currentPage - 1) * this.itemsPerPage;

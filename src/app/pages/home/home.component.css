@@ -5,6 +5,15 @@
   margin-top: 20px;
 }
 
+.fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Asegura que el componente esté por encima de otros elementos */
+}
+
+
 .product-item {
   display: flex;
   flex-direction: column;

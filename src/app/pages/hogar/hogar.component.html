@@ -1,3 +1,12 @@
+<p-messages
+class="fixed-top"
+[(value)]="messages"
+[showTransitionOptions]="'500ms'"
+[hideTransitionOptions]="'500ms'"
+[enableService]="true">
+</p-messages>
+
+
 <div class="product-list">
   <div class="product-items" *ngFor="let product of paginatedProducts">
     <img [src]="product.images && product.images[0]" alt="{{ product.title }}" class="product-image" style="width: 200px;" />
@@ -11,7 +20,7 @@
       <div class="product-price">{{ '$' + product.price }}</div>
       <div class="product-actions">
         <button pButton icon="pi pi-heart" [style]="{ 'margin-right': '10px' }"></button>
-        <button pButton icon="pi pi-shopping-cart" class="cart-button" label="Buy Now"></button>
+        <button pButton icon="pi pi-shopping-cart" class="cart-button" label="Agregar" (click)="agregarAlCarrito(product)"></button>
       </div>
     </div>
   </div>

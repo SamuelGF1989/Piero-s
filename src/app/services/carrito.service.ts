@@ -12,10 +12,33 @@ export class CarritoService {
   private cartSubject = new BehaviorSubject<any[]>([]);
   cart$: Observable<any[]> = this.cartSubject.asObservable();
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    // Cargar el carrito desde LocalStorage al iniciar el servicio
+    const storedCart = localStorage.getItem('carrito');
+    if (storedCart) {
+      this.cartSubject.next(JSON.parse(storedCart));
+    }
+  }
 
   addProductToCart(product: any) {
-    this.cartSubject.next([...this.cartSubject.getValue(), product]);
+    // Agregar producto al carrito y actualizar LocalStorage
+    const updatedCart = [...this.cartSubject.getValue(), product];
+    this.cartSubject.next(updatedCart);
+    localStorage.setItem('carrito', JSON.stringify(updatedCart));
+  }
+
+  removeProductFromCart(index: number) {
+    // Obtener el carrito actual
+    const currentCart = this.cartSubject.getValue();
+
+    // Filtrar el carrito para excluir el producto con el índice dado
+    const updatedCart = currentCart.filter((item, i) => i !== index);
+
+    // Emitir el nuevo valor del carrito
+    this.cartSubject.next(updatedCart);
+
+    // Actualizar LocalStorage con el nuevo carrito
+    localStorage.setItem('carrito', JSON.stringify(updatedCart));
   }
 
   getCart() {
@@ -31,6 +54,8 @@ export class CarritoService {
   }
 
   clearCart() {
+    // Limpiar el carrito y eliminarlo del LocalStorage
     this.cartSubject.next([]);
+    localStorage.removeItem('carrito');
   }
 }
