@@ -19,6 +19,15 @@ import { LoginComponent } from './pages/login/login.component';
 import { RouterModule } from '@angular/router';
 import { PasswordModule } from 'primeng/password';
 import { RegisterComponent } from './pages/register/register.component';
+import { TecnologiaComponent } from './pages/tecnologia/tecnologia.component';
+import { BellezaComponent } from './pages/belleza/belleza.component';
+import { AlimentosComponent } from './pages/alimentos/alimentos.component';
+import { HogarComponent } from './pages/hogar/hogar.component';
+import { ModaComponent } from './pages/moda/moda.component';
+import { VehiculosComponent } from './pages/vehiculos/vehiculos.component';
+import { CartComponent } from './pages/cart/cart.component';
+import { OrderListModule } from 'primeng/orderlist';
+
 
 
 @NgModule({
@@ -30,6 +39,13 @@ import { RegisterComponent } from './pages/register/register.component';
     FooterComponent,
     LoginComponent,
     RegisterComponent,
+    TecnologiaComponent,
+    BellezaComponent,
+    AlimentosComponent,
+    HogarComponent,
+    ModaComponent,
+    VehiculosComponent,
+    CartComponent,
 
   ],
   imports: [
@@ -44,7 +60,8 @@ import { RegisterComponent } from './pages/register/register.component';
     CardModule,
     TagModule,
     RouterModule,
-    PasswordModule
+    PasswordModule,
+
 
   ],
   providers: [],

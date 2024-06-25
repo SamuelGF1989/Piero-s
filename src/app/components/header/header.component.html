@@ -2,19 +2,23 @@
   <div class="logo">
     <a href="#"><img src="assets/logo.png"></a>
   </div>
+  <!-- Texto de bienvenida -->
+  <div *ngIf="isAuthenticated" class="welcome-text">Bienvenido, {{ username }}</div>
+  <div *ngIf="isAuthenticated" class="money-text">Dinero: {{ money | currency }}</div>
   <div class="nav-actions">
-    <p-button label="Carrito" icon="pi pi-cart-plus" [raised]="true" severity="secondary" />
-    <p-button label="Iniciar sesion" icon="pi pi-user" [text]="true" [raised]="true" routerLink="/login"  />
+    <p-button label="Carrito" icon="pi pi-cart-plus" [raised]="true" severity="secondary" routerLink="/carrito"></p-button>
+    <p-button *ngIf="!isAuthenticated" label="Iniciar sesión" icon="pi pi-user" [text]="true" [raised]="true" routerLink="/login"></p-button>
+    <p-button *ngIf="isAuthenticated" label="Cerrar sesión" icon="pi pi-user" [text]="true" [raised]="true" (click)="onLogoutClick()"></p-button>
   </div>
   <div class="nav-links">
     <ul>
       <li><a href="#">Inicio</a></li>
-      <li><a href="#">Tecnlogia</a></li>
-      <li><a href="#">Belleza</a></li>
-      <li><a href="#">Alimentos</a></li>
-      <li><a href="#">Hogar</a></li>
-      <li><a href="#">Moda</a></li>
-      <li><a href="#">Vehiculos</a></li>
+      <li><a [routerLink]="['/tecnologia']">Tecnología</a></li>
+      <li><a [routerLink]="['/belleza']">Belleza</a></li>
+      <li><a [routerLink]="['/alimentos']">Alimentos</a></li>
+      <li><a [routerLink]="['/hogar']">Hogar</a></li>
+      <li><a [routerLink]="['/moda']">Moda</a></li>
+      <li><a [routerLink]="['/vehiculos']">Vehículos</a></li>
     </ul>
   </div>
 </nav>

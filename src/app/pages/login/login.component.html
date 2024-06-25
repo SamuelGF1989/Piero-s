@@ -12,6 +12,7 @@
         <label for="password">Password</label>
         <p-password id="password" [(ngModel)]="password" [feedback]="false"></p-password>
       </div>
+      <p *ngIf="errorMessage" class="error-message">{{ errorMessage }}</p> <!-- Mostrar mensaje de error -->
     </div>
     <ng-template pTemplate="footer">
       <div class="flex gap-3 mt-1">

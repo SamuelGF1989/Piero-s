@@ -1,35 +1,27 @@
-import { Component, OnInit } from '@angular/core';
-import { ProductsService } from '../../productservice.service';
+import { Component } from '@angular/core';
 import { Product } from '../../interfaces/product.interface';
-import { CarritoService } from '../../services/carrito.service';
+import { ProductsService } from '../../productservice.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  selector: 'app-alimentos',
+  templateUrl: './alimentos.component.html',
+  styleUrl: './alimentos.component.css'
 })
-export class HomeComponent implements OnInit {
+export class AlimentosComponent {
 
   products: Product[] = [];
   paginatedProducts: Product[] = [];
   currentPage = 1;
   itemsPerPage = 10; // Cambia este valor según la cantidad de productos que quieras mostrar por página
 
-  constructor(private productsService: ProductsService, private carritoService: CarritoService) { }
-
-
-  carrito: any[] = [];
+  constructor(private productsService: ProductsService) { }
 
   ngOnInit(): void {
-    this.productsService.getProducts()
+    this.productsService.getFood()
       .subscribe((products: Product[]) => {
         this.products = products;
         this.paginateProducts();
       });
-  }
-
-  agregarAlCarrito(product: any) {
-    this.carritoService.addProductToCart(product);
   }
 
   paginateProducts(): void {
@@ -55,4 +47,5 @@ export class HomeComponent implements OnInit {
   get totalPages(): number {
     return Math.ceil(this.products.length / this.itemsPerPage);
   }
+
 }

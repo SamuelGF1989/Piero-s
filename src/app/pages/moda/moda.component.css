@@ -1,0 +1,108 @@
+.carousel-container {
+  margin: 0 auto; /* Centra el carrusel horizontalmente */
+  max-width: 1200px; /* Establece el ancho máximo del carrusel */
+  padding: 0 20px; /* Agrega un espacio de relleno a los lados del carrusel */
+  margin-top: 20px;
+}
+
+.product-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  background-color: white;
+  flex-wrap: wrap;
+}
+
+.product-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  background-color: white;
+  flex-wrap: wrap;
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.product-item-content {
+  width: 100%;
+}
+
+.product-image {
+  max-width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  height: 200px;
+}
+
+.p-mb-1 {
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.p-mb-3 {
+  margin-bottom: 3rem;
+}
+
+.product-price{
+
+  color: black;
+
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto; /* Centra las tarjetas horizontalmente */
+  max-width: 1200px; /* Establece el ancho máximo de las tarjetas */
+  padding: 0 20px; /* Agrega un espacio de relleno a los lados de las tarjetas */
+}
+
+.product-list p-card {
+  margin-bottom: 20px;
+}
+.product-category{
+color: black;
+}
+.product-title{
+color: black;
+}
+
+/* Estilo para el contenedor de paginación */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* Ajusta el margen superior según sea necesario */
+}
+
+/* Estilo para los botones de paginación */
+.pagination-button {
+  background-color: #007bff;
+  color: #fff;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 0 10px; /* Ajusta el espacio entre los botones */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.pagination-button:hover {
+  background-color: #0056b3;
+}
+
+.pagination-button:disabled {
+  background-color: #6c757d;
+  color: #fff;
+  cursor: not-allowed;
+}

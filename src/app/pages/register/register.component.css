@@ -1,0 +1,38 @@
+.register {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.userinput{
+
+  margin-left: 10px;
+
+}
+
+.mailinput{
+
+  margin-left: 43px;
+
+}
+
+.register.p-card {
+  margin: auto;
+}
+
+.register .p-inputtext {
+  width: 100%;
+  max-width: 250px;
+}
+
+.login {
+  cursor: pointer;
+  color: blue; /* Color azul para indicar un enlace */
+  text-decoration: underline; /* Subrayado para indicar un enlace */
+}
+
+.login:hover {
+  color: darkblue; /* Cambiar el color al pasar el mouse */
+}
